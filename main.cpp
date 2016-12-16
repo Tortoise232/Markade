@@ -261,7 +261,7 @@ std::cout<<"       ";
 
 void init_player(int &a,int &b) // initiaza jucatorul
 {e[1].hp=1;
- srand(time());
+ srand(time(NULL));
  while(a<1||a>20)
     a=rand()%18;
  while(b<1||b>20)
@@ -341,14 +341,14 @@ a[e[i].pozi][e[i].pozj]=0;
 
   if(m=='a'&&e[i].pozj-1>0)
    {if(a[e[i].pozi][e[i].pozj-1]==0)
-     {e[i].pozj-=1;a[e[i].pozi][e[i].pozj]=e[i].id;}
+    { e[i].pozj-=1;a[e[i].pozi][e[i].pozj]=e[i].id; }
    else
-   if(a[e[i].pozi][e[i].pozj-1]==3)
+    if(a[e[i].pozi][e[i].pozj-1]==3)
    {
     e[i].hp--;
     e[i].pozj-=1;
-    a[e[i].pozi][e[i].pozj]=e[i].id;}}
-     e[i].pozj++;a[e[i].pozi][e[i].pozj]=e[i].id;}}
+    a[e[i].pozi][e[i].pozj]=e[i].id;}
+    e[i].pozj++;a[e[i].pozi][e[i].pozj]=e[i].id;}
   if(m=='s'&&e[i].pozi+1<=20)
     {if(a[e[i].pozi+1][e[i].pozj]==0)
         {
